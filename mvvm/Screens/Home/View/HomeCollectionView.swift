@@ -10,32 +10,33 @@ import UIKit
 
 
 protocol HomeCollectionViewDelegate: class {
-    
-    func openMoreRecomendation()
+    func didSelectItemAt(appleSong: AppleSong)
 }
 
 
 
 class HomeCollectionView: UICollectionView {
     
-    
     var viewModel: HomeCollectionViewViewModelType?
-    weak var productsDelegate: HomeCollectionViewDelegate?
-    
-    
-    
+    weak var collectionDelegate: HomeCollectionViewDelegate?
+
     init() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         super.init(frame: .zero, collectionViewLayout: layout)
+        
+        
         viewModel = HomeCollectionViewViewModel()
+        
+        viewModel?.onReloadData = { [weak self] in
+            self?.reloadData()
+        }
         
         setupUI()
     }
     
     
     fileprivate func setupUI() {
-        reloadData()
         setupCollectionSettings()
     }
     
@@ -50,7 +51,7 @@ class HomeCollectionView: UICollectionView {
         contentInset = UIEdgeInsets(top: Constants.padding, left:  Constants.padding, bottom: 0, right:  Constants.padding)
     }
     
-
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -62,22 +63,28 @@ class HomeCollectionView: UICollectionView {
 extension HomeCollectionView: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
         return viewModel?.numberOfRows() ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.reuseId, for: indexPath) as? HomeCollectionViewCell
-
+        
         guard let collectionViewCell = cell, let viewModel = viewModel else { return UICollectionViewCell() }
-               
+        
         let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
-
+        
         collectionViewCell.viewModel = cellViewModel
-
+        
         return collectionViewCell
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let viewModel = viewModel else { return }
+        viewModel.selectItem(atIndexPath: indexPath)
+        guard let appleSong = viewModel.viewModelForSelectedRow() else { return }
+        collectionDelegate?.didSelectItemAt(appleSong: appleSong)
+    }
 }
 
 

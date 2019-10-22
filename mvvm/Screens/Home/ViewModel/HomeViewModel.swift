@@ -19,4 +19,5 @@ class HomeViewModel: HomeViewModelType {
     init() {
         collectionView = HomeCollectionView()
     }
+
 }

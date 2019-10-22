@@ -17,17 +17,18 @@ protocol HomeCollectionViewCellViewModelType: class {
 
 class HomeCollectionViewCellViewModel: HomeCollectionViewCellViewModelType {
     
-    private var profile: Profile
+    private var profile: AppleSong
 
     var label: String {
-        return profile.label
+        return profile.name
     }
 
     var imageURL: String {
-        return profile.picture
+        return profile.artworkUrl100
     }
-
-    init(cell: Profile) {
+    
+    
+    init(cell: AppleSong) {
         self.profile = cell
     }
 }

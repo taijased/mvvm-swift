@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, StoryboardInitializable{
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = HomeViewModel()
+        viewModel?.collectionView.collectionDelegate = self
         setupUI()
     }
     
@@ -26,4 +27,14 @@ class HomeViewController: UIViewController, StoryboardInitializable{
         viewModel.collectionView.fillSuperview()
     }
     
+}
+
+//MARK: - HomeCollectionViewDelegate
+extension HomeViewController: HomeCollectionViewDelegate {
+    func didSelectItemAt(appleSong: AppleSong) {
+        let detailsViewController = DetailsViewController()
+        detailsViewController.appleSong = appleSong
+        self.present(detailsViewController, animated: true, completion: nil)
+    }
+
 }

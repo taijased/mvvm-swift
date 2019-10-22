@@ -24,7 +24,11 @@
 		13E19987235DC5B200A55298 /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E19986235DC5B200A55298 /* WebImageView.swift */; };
 		13E1998B235DCE9D00A55298 /* HomeCollectionViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1998A235DCE9C00A55298 /* HomeCollectionViewViewModel.swift */; };
 		13E1998D235DCF5600A55298 /* HomeCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1998C235DCF5600A55298 /* HomeCollectionViewCellViewModel.swift */; };
-		13E1998F235DD18100A55298 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1998E235DD18100A55298 /* Profile.swift */; };
+		13E1998F235DD18100A55298 /* AppleMusicRSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1998E235DD18100A55298 /* AppleMusicRSS.swift */; };
+		13E19992235DDAE600A55298 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E19991235DDAE600A55298 /* NetworkService.swift */; };
+		13E19994235DDAFB00A55298 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E19993235DDAFB00A55298 /* NetworkDataFetcher.swift */; };
+		13E19996235DDB4500A55298 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E19995235DDB4500A55298 /* DataFetcherService.swift */; };
+		13E1999C235DF6DB00A55298 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1999B235DF6DB00A55298 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +51,11 @@
 		13E19986235DC5B200A55298 /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
 		13E1998A235DCE9C00A55298 /* HomeCollectionViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewViewModel.swift; sourceTree = "<group>"; };
 		13E1998C235DCF5600A55298 /* HomeCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
-		13E1998E235DD18100A55298 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		13E1998E235DD18100A55298 /* AppleMusicRSS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicRSS.swift; sourceTree = "<group>"; };
+		13E19991235DDAE600A55298 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		13E19993235DDAFB00A55298 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		13E19995235DDB4500A55298 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
+		13E1999B235DF6DB00A55298 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 				13E1993C235DBDFC00A55298 /* AppDelegate.swift */,
 				13E1995B235DC00100A55298 /* SceneDelegate.swift */,
 				13E19950235DBE1600A55298 /* Library */,
+				13E19990235DD82500A55298 /* Service */,
 				13E19953235DBE3800A55298 /* Screens */,
 				13E1997D235DC53D00A55298 /* Helpers */,
 				13E19942235DBDFC00A55298 /* Main.storyboard */,
@@ -105,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				13E19954235DBE4000A55298 /* Home */,
+				13E19997235DF68500A55298 /* Details */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -142,7 +152,7 @@
 		13E19958235DBE6600A55298 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				13E1998E235DD18100A55298 /* Profile.swift */,
+				13E1998E235DD18100A55298 /* AppleMusicRSS.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,6 +167,24 @@
 				13E19986235DC5B200A55298 /* WebImageView.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		13E19990235DD82500A55298 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				13E19991235DDAE600A55298 /* NetworkService.swift */,
+				13E19993235DDAFB00A55298 /* NetworkDataFetcher.swift */,
+				13E19995235DDB4500A55298 /* DataFetcherService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		13E19997235DF68500A55298 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				13E1999B235DF6DB00A55298 /* DetailsViewController.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,15 +259,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				13E1998D235DCF5600A55298 /* HomeCollectionViewCellViewModel.swift in Sources */,
-				13E1998F235DD18100A55298 /* Profile.swift in Sources */,
+				13E1998F235DD18100A55298 /* AppleMusicRSS.swift in Sources */,
 				13E19987235DC5B200A55298 /* WebImageView.swift in Sources */,
 				13E1997A235DC4DD00A55298 /* HomeCollectionView.swift in Sources */,
 				13E1993D235DBDFC00A55298 /* AppDelegate.swift in Sources */,
+				13E19996235DDB4500A55298 /* DataFetcherService.swift in Sources */,
 				13E19985235DC59D00A55298 /* UIColor + random.swift in Sources */,
 				13E1998B235DCE9D00A55298 /* HomeCollectionViewViewModel.swift in Sources */,
 				13E19981235DC57C00A55298 /* Constraints.swift in Sources */,
 				13E19952235DBE2D00A55298 /* StoryboardInitializable.swift in Sources */,
+				13E19994235DDAFB00A55298 /* NetworkDataFetcher.swift in Sources */,
 				13E19983235DC58B00A55298 /* UIButton + Custom.swift in Sources */,
+				13E19992235DDAE600A55298 /* NetworkService.swift in Sources */,
+				13E1999C235DF6DB00A55298 /* DetailsViewController.swift in Sources */,
 				13E19972235DC35D00A55298 /* HomeViewController.swift in Sources */,
 				13E19974235DC3B000A55298 /* HomeViewModel.swift in Sources */,
 				13E1995C235DC00100A55298 /* SceneDelegate.swift in Sources */,

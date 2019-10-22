@@ -11,6 +11,7 @@ import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
     
+
     static let reuseId = "HomeCollectionViewCell"
     
     weak var viewModel: HomeCollectionViewCellViewModelType? {
@@ -75,6 +76,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         label.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
     }
     
     
