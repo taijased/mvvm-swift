@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		135749B3240007AD00851B36 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135749B2240007AD00851B36 /* DataFetcherService.swift */; };
 		13E1993D235DBDFC00A55298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1993C235DBDFC00A55298 /* AppDelegate.swift */; };
 		13E19944235DBDFC00A55298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E19942235DBDFC00A55298 /* Main.storyboard */; };
 		13E19946235DBDFD00A55298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E19945235DBDFD00A55298 /* Assets.xcassets */; };
@@ -27,11 +28,11 @@
 		13E1998F235DD18100A55298 /* AppleMusicRSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1998E235DD18100A55298 /* AppleMusicRSS.swift */; };
 		13E19992235DDAE600A55298 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E19991235DDAE600A55298 /* NetworkService.swift */; };
 		13E19994235DDAFB00A55298 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E19993235DDAFB00A55298 /* NetworkDataFetcher.swift */; };
-		13E19996235DDB4500A55298 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E19995235DDB4500A55298 /* DataFetcherService.swift */; };
 		13E1999C235DF6DB00A55298 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1999B235DF6DB00A55298 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		135749B2240007AD00851B36 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
 		13E19939235DBDFC00A55298 /* mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E1993C235DBDFC00A55298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13E19943235DBDFC00A55298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		13E1998E235DD18100A55298 /* AppleMusicRSS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicRSS.swift; sourceTree = "<group>"; };
 		13E19991235DDAE600A55298 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		13E19993235DDAFB00A55298 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
-		13E19995235DDB4500A55298 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
 		13E1999B235DF6DB00A55298 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,7 +174,7 @@
 			children = (
 				13E19991235DDAE600A55298 /* NetworkService.swift */,
 				13E19993235DDAFB00A55298 /* NetworkDataFetcher.swift */,
-				13E19995235DDB4500A55298 /* DataFetcherService.swift */,
+				135749B2240007AD00851B36 /* DataFetcherService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -263,7 +263,6 @@
 				13E19987235DC5B200A55298 /* WebImageView.swift in Sources */,
 				13E1997A235DC4DD00A55298 /* HomeCollectionView.swift in Sources */,
 				13E1993D235DBDFC00A55298 /* AppDelegate.swift in Sources */,
-				13E19996235DDB4500A55298 /* DataFetcherService.swift in Sources */,
 				13E19985235DC59D00A55298 /* UIColor + random.swift in Sources */,
 				13E1998B235DCE9D00A55298 /* HomeCollectionViewViewModel.swift in Sources */,
 				13E19981235DC57C00A55298 /* Constraints.swift in Sources */,
@@ -275,6 +274,7 @@
 				13E19972235DC35D00A55298 /* HomeViewController.swift in Sources */,
 				13E19974235DC3B000A55298 /* HomeViewModel.swift in Sources */,
 				13E1995C235DC00100A55298 /* SceneDelegate.swift in Sources */,
+				135749B3240007AD00851B36 /* DataFetcherService.swift in Sources */,
 				13E1997C235DC52500A55298 /* HomeCollectionViewCell.swift in Sources */,
 				13E1997F235DC55400A55298 /* Constants.swift in Sources */,
 			);
