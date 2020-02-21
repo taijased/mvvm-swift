@@ -21,5 +21,4 @@ class DataFetcherService {
         dataFetcher.fetchGenericJSONData(urlString: urlString, response: completion)
     }
     
-    
 }

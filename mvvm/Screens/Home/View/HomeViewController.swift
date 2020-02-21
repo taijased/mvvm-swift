@@ -22,10 +22,13 @@ class HomeViewController: UIViewController, StoryboardInitializable{
     
     fileprivate func setupUI() {
         
+        title = "Top Apple Hit's"
+        
         guard let viewModel = viewModel else { return }
         view.addSubview(viewModel.collectionView)
         viewModel.collectionView.fillSuperview()
     }
+    
     
 }
 
